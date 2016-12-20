@@ -1,0 +1,11 @@
+---
+contentdir: "content"
+layoutdir: "layouts"
+publishdir: "public"
+indexes:
+  category: "categories"
+baseurl: "https://eightbec.github.io/blog"
+title: "eightBEC's blog"
+canonifyurls: true
+theme: "Lanyon"
+...
