@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on eightBEC&#39;s blog</title>
-    <link>https://eightbec.github.io/blog/posts/index.xml</link>
-    <description>Recent content in Posts on eightBEC&#39;s blog</description>
+    <title>Iot on eightBEC&#39;s blog</title>
+    <link>https://eightbec.github.io/blog/categories/iot/index.xml</link>
+    <description>Recent content in Iot on eightBEC&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 20 Dec 2016 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://eightbec.github.io/blog/posts/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://eightbec.github.io/blog/categories/iot/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>ESP8266 on White Aliexpress Break-Out Board</title>
@@ -23,33 +22,6 @@
 &lt;p&gt;After soldering the ESP8266 on top of the break-board I ran a few tests and tried to get this little IoT device up and running, but I wasn&amp;rsquo;t able to do so.&lt;/p&gt;
 
 &lt;p&gt;It took me quite a while to figure out that the VCC pin of the break-board wasn&amp;rsquo;t connected to the VCC pin going to the ESP8266 board. Becuase of the lack of documentation there was no clue that either one has to add a voltage divider or a jumper. Doing the latter fixed the issue and I was able to get the ESP8266 running.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>First Post</title>
-      <link>https://eightbec.github.io/blog/posts/oldest/</link>
-      <pubDate>Thu, 27 Mar 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://eightbec.github.io/blog/posts/oldest/</guid>
-      <description>
-
-&lt;h2 id=&#34;sample-post-1&#34;&gt;Sample Post 1&lt;/h2&gt;
-
-&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
-
-&lt;h3 id=&#34;sub-heading&#34;&gt;Sub-heading&lt;/h3&gt;
-
-&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est, non, ratione, molestiae illo optio quia sequi id fuga natus nihil ad architecto dolor alias ex sunt iste aperiam eius itaque.&lt;/p&gt;
-
-&lt;h2 id=&#34;foo&#34;&gt;foo&lt;/h2&gt;
-
-&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo, neque, eveniet voluptate eos debitis illum qui nostrum eius maxime ratione assumenda suscipit impedit deserunt voluptatibus odio ducimus non. Ex, ratione.&lt;/p&gt;
 </description>
     </item>
     
