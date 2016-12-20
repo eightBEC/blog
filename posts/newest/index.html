@@ -7,7 +7,7 @@
 <head>
     <meta charset="utf-8">
     <base href="https://eightbec.github.io/blog">
-    <title> Just another sample post </title>
+    <title> ESP8266 on White Aliexpress Break-Out Board </title>
     <link rel="canonical" href="https://eightbec.github.io/blog/posts/newest/">
     
 
@@ -37,7 +37,9 @@
 
   <div class="sidebar-item">
     <p>
-      &copy; 2016 eightBEC. Powered by <a href="http://hugo.spf13.com">Hugo</a>. Design adapted from <a href="http://lanyon.getpoole.com">Lanyon</a>.
+      &copy; 2016 eightBEC
+    <br />Powered by <a href="http://hugo.spf13.com">Hugo</a>.
+    <br />Design adapted from <a href="http://lanyon.getpoole.com">Lanyon</a>.
     </p>
   </div>
 </div>
@@ -55,22 +57,18 @@
 
     
     <div class="container content">
-      <h1 class="post-title">Just another sample post</h1>
+      <h1 class="post-title">ESP8266 on White Aliexpress Break-Out Board</h1>
         <section id="main">
-          <h5 id="date"> Sat Mar 29, 2014 </h5>
+          <h5 id="date"> Tue Dec 20, 2016 </h5>
           
 
 <h2 id="first-heading">First Heading</h2>
 
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, consequatur aspernatur omnis iste. Voluptates, id inventore ea natus ab sed amet ipsa ratione sunt dignissimos. Soluta illum aliquid repellendus recusandae.</p>
+<p>Recently I&rsquo;ve bought a couple of those super cheap <a href="https://de.aliexpress.com/item/5PCS-Esp8266-WiFi-series-of-model-ESP-12-ESP-12F-esp12F-esp12-authenticity-guaranteed/32655304335.html?spm=2114.010208.3.144.EIgPmS&amp;ws_ab_test=searchweb0_0,searchweb201602_2_10065_10068_10084_10083_10080_10082_10081_10060_10061_10062_10056_10055_10054_10059_10099_10078_10079_427_10073_10103_10102_10101_10096_10052_10050_10051,searchweb201603_3&amp;btsid=0101278f-2176-44d3-bb51-a69a912e2603">ESP8266-12E devices</a> and the proper white <a href="https://de.aliexpress.com/item/10Pcs-Set-ESP8266-WiFi-Modules-Breakout-Transfer-Board-Adapter-Plate-For-ESP-07-ESP-08-ESP/32655534675.html?spm=2114.010208.3.21.f1wPGl&amp;ws_ab_test=searchweb0_0,searchweb201602_2_10065_10068_10084_10083_10080_10082_10081_10060_10061_10062_10056_10055_10054_10059_10099_10078_10079_427_10073_10103_10102_10101_10096_10052_10050_10051,searchweb201603_3&amp;btsid=ff36fcdd-d486-4eb6-91cb-df975902bc09">break-out boards</a>.</p>
 
-<h3 id="sub">Sub</h3>
+<p>After soldering the ESP8266 on top of the break-board I ran a few tests and tried to get this little IoT device up and running, but I wasn&rsquo;t able to do so.</p>
 
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio, perferendis saepe voluptatem a nesciunt architecto voluptas deleniti dolor tempora quasi quidem odit rem fugit magnam minima quam dolores vel id?</p>
-
-<h2 id="conclusion">Conclusion</h2>
-
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, numquam ipsa ad! Quasi, deleniti quae sint consequatur error corporis dicta inventore alias soluta dignissimos? Molestias, quia ab deserunt repellat ut.</p>
+<p>It took me quite a while to figure out that the VCC pin of the break-board wasn&rsquo;t connected to the VCC pin going to the ESP8266 board. Becuase of the lack of documentation there was no clue that either one has to add a voltage divider or a jumper. Doing the latter fixed the issue and I was able to get the ESP8266 running.</p>
 
         </section>
     </div>
@@ -87,7 +85,7 @@
 
   
     <span class="right">
-    <em>Next: </em><a class="next" href="https://eightbec.github.io/blog/posts/middle/"> &nbsp; Second Post</a> &raquo;
+    <em>Next: </em><a class="next" href="https://eightbec.github.io/blog/posts/oldest/"> &nbsp; First Post</a> &raquo;
     </span>
   
 </div>
@@ -98,11 +96,9 @@
   <ul class="catlist">
     <li><em>Categories: </em></li>
     
-      <li><a href="https://eightbec.github.io/blog/categories/hugo">hugo</a> </li>
+      <li><a href="https://eightbec.github.io/blog/categories/iot">iot</a> </li>
     
-      <li><a href="https://eightbec.github.io/blog/categories/fun">fun</a> </li>
-    
-      <li><a href="https://eightbec.github.io/blog/categories/test">test</a> </li>
+      <li><a href="https://eightbec.github.io/blog/categories/electronics">electronics</a> </li>
     
   </ul>
 </div>
