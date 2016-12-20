@@ -6,7 +6,7 @@
 
 {{ partial "header.html" . }}
 
-<body class="theme-base-08">
+<body class="theme-base-0b">
   {{ partial "sidebar.html" . }}
 
   <!-- See /layouts/indexes/category.html for explanation of this section -->
@@ -15,6 +15,7 @@
       <div class="container">
         <h3 class="masthead-title">
           <a href="/posts" title="Blog">Blog Posts</a>
+          {{ partial "follow.html" . }}
         </h3>
       </div>
     </div>
@@ -47,6 +48,3 @@
 
   <!-- Include footer (ends <body> and <html>) -->
   {{ partial "footer.html" }}
-
-
-
