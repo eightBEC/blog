@@ -1,0 +1,164 @@
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <base href="https://eightbec.github.io/blog">
+    <title> Cloud-Connected Soil Moisture Sensor Using ESP8266 </title>
+    <link rel="canonical" href="https://eightbec.github.io/blog/posts/moisture-sensor/">
+    
+
+<link rel="stylesheet" href="https://eightbec.github.io/blog/css/poole.css">
+<link rel="stylesheet" href="https://eightbec.github.io/blog/css/syntax.css">
+<link rel="stylesheet" href="https://eightbec.github.io/blog/css/lanyon.css">
+<link rel="stylesheet" href="https://eightbec.github.io/blog/css/custom.css">
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700|PT+Sans:400">
+
+</head>
+
+
+<body class="theme-base-0b">
+  
+
+
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+
+
+<div class="sidebar" id="sidebar">
+
+  <nav class="sidebar-nav">
+    <a class="sidebar-nav-item" href="https://eightbec.github.io/blog/">Home</a>
+
+    <a class="sidebar-nav-item" href="https://eightbec.github.io/blog/posts">Blog</a>
+  </nav>
+
+  <div class="sidebar-item">
+    <p>
+      &copy; 2016 eightBEC
+    <br />Powered by <a href="http://hugo.spf13.com">Hugo</a>.
+    <br />Design adapted from <a href="http://lanyon.getpoole.com">Lanyon</a>.
+    </p>
+  </div>
+</div>
+
+
+  
+  <div class="wrap">
+    <div class="masthead">
+      <div class="container">
+        <h3 class="masthead-title">
+          <a href="https://eightbec.github.io/blog/posts" title="Blog">Blog Posts</a>
+          
+<div class="follow">
+  <a href="https://twitter.com/8B_EC" class="twitter-follow-button" data-show-count="false">Follow @8B_EC</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+</div>
+
+        </h3>
+      </div>
+    </div>
+
+    
+    <div class="container content">
+      <h1 class="post-title">Cloud-Connected Soil Moisture Sensor Using ESP8266</h1>
+        <section id="main">
+  <h5 id="date"> Thu Dec 22, 2016 </h5>
+  <a href="https://twitter.com/share" class="twitter-share-button" data-via="8BEC" data-size="large">Tweet</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+          
+
+<hr />
+
+<p>Today I&rsquo;ve built a soil moisture sensor connected to the Internet of Things for less than 5€ using an ESP8266-12E and a cheap moisture sensor.
+The idea is to read the moisture value every x hours and put the ESP8266 into deep sleep mode.</p>
+
+<h2 id="1-materials">1.Materials</h2>
+
+<p>1x <a href="https://de.aliexpress.com/item/Esp8266-WiFi-series-of-model-ESP-12-ESP-12F-esp12F-esp12-authenticity-guaranteed/32639524010.html?spm=2114.010208.3.75.TaI1vv&amp;ws_ab_test=searchweb0_0,searchweb201602_2_10065_10068_10000009_10084_10083_10080_10082_10081_10060_10061_10062_10056_10055_10037_10054_10059_10032_10099_10078_10079_10077_427_426_10103_10073_10102_10101_10096_10052_10050_10107_10106_10051,searchweb201603_3,afswitch_5&amp;btsid=12d312ef-b28e-4e41-ac0a-ff39da0a68a1">ESP8266-12E</a></p>
+
+<p>1x <a href="https://de.aliexpress.com/item/Serial-WIFI-ESP8266-module-adapter-plate-Full-IO-port-leads-you-can-choose-the-ESP-07/32380914509.html?spm=2114.010208.3.1.Am64ZS&amp;ws_ab_test=searchweb0_0,searchweb201602_2_10065_10068_10000009_10084_10083_10080_10082_10081_10060_10061_10062_10056_10055_10037_10054_10059_10032_10099_10078_10079_10077_427_426_10103_10073_10102_10101_10096_10052_10050_10107_10106_10051,searchweb201603_3,afswitch_5&amp;btsid=12d312ef-b28e-4e41-ac0a-ff39da0a68a1">ESP8266-12E Break-Out Board</a> (optional)</p>
+
+<p>1x <a href="https://de.aliexpress.com/item/5PCS-LOT-FREE-SHIPPING-Soil-moisture-meter-testing-module-soil-humidity-sensor-robot-intelligent-car-for/1625352348.html?spm=2114.010208.8.53.K1kpov">Soil Mositure Sensor</a></p>
+
+<p>some wires and resistors for the voltage divider</p>
+
+<hr />
+
+<h2 id="2-build">2.Build</h2>
+
+<p>Wire up the components like shown in the following picture. Please make sure to use a voltage divider because the ESP8266&rsquo;s analog in has a range from 0 V - 1 V, but the sensor ranges from 0 V - 3.3 V
+<img src="https://cloud.githubusercontent.com/assets/16187615/21501819/8409f220-cc4b-11e6-86f8-37d96be0e6bd.png" alt="sketch" /></p>
+
+<hr />
+
+<h2 id="3-program">3.Program</h2>
+
+<p>The prototype code can be found on <a href="https://github.com/eightBEC/esp8266moisture">GitHub</a></p>
+
+<p>I&rsquo;ve been using IBM&rsquo;s IoT Platform to send my data to, but you can use every IoT platform you like to use.
+Before uploading the code, adjust the config0.lua file which contains all properties for WIFI and IoT connectivity.
+Make sure to upload all .lua files to your device using a tool like LuaLoader.</p>
+
+<hr />
+
+<h2 id="4-next-steps">4.Next Steps</h2>
+
+<p>In the future I&rsquo;ll add a solar panel, a lithium-ion battery pack and a MOSFET to disconnect the sensor while deep sleep.</p>
+
+          <a href="https://twitter.com/share" class="twitter-share-button" data-via="8BEC" data-size="large">Tweet</a>
+      <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+        </section>
+
+    </div>
+  </div>
+
+  <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+
+  
+
+<div class="container">
+  <hr />
+  <hr />
+  
+
+  
+    <span class="right">
+    <em>Next: </em><a class="next" href="https://eightbec.github.io/blog/posts/newest/"> &nbsp; ESP8266 on White Aliexpress Break-Out Board</a> &raquo;
+    </span>
+  
+</div>
+
+  <br />
+  
+<div class="container">
+  <ul class="catlist">
+    <li><em>Categories: </em></li>
+    
+  </ul>
+</div>
+
+
+
+  
+  
+
+<div class="container content">
+<footer>
+  <div>
+    <p class="right credit">
+    Back to <a href="https://eightbec.github.io/blog/">Home Page</a>
+    </p>
+  </div>
+</footer>
+</div>
+
+
+
+</body>
+</html>
+

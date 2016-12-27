@@ -5,8 +5,56 @@
     <link>https://eightbec.github.io/blog/posts/index.xml</link>
     <description>Recent content in Posts on eightBEC&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 20 Dec 2016 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 22 Dec 2016 23:48:42 +0100</lastBuildDate>
     <atom:link href="https://eightbec.github.io/blog/posts/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Cloud-Connected Soil Moisture Sensor Using ESP8266</title>
+      <link>https://eightbec.github.io/blog/posts/moisture-sensor/</link>
+      <pubDate>Thu, 22 Dec 2016 23:48:42 +0100</pubDate>
+      
+      <guid>https://eightbec.github.io/blog/posts/moisture-sensor/</guid>
+      <description>
+
+&lt;hr /&gt;
+
+&lt;p&gt;Today I&amp;rsquo;ve built a soil moisture sensor connected to the Internet of Things for less than 5€ using an ESP8266-12E and a cheap moisture sensor.
+The idea is to read the moisture value every x hours and put the ESP8266 into deep sleep mode.&lt;/p&gt;
+
+&lt;h2 id=&#34;1-materials&#34;&gt;1.Materials&lt;/h2&gt;
+
+&lt;p&gt;1x &lt;a href=&#34;https://de.aliexpress.com/item/Esp8266-WiFi-series-of-model-ESP-12-ESP-12F-esp12F-esp12-authenticity-guaranteed/32639524010.html?spm=2114.010208.3.75.TaI1vv&amp;amp;ws_ab_test=searchweb0_0,searchweb201602_2_10065_10068_10000009_10084_10083_10080_10082_10081_10060_10061_10062_10056_10055_10037_10054_10059_10032_10099_10078_10079_10077_427_426_10103_10073_10102_10101_10096_10052_10050_10107_10106_10051,searchweb201603_3,afswitch_5&amp;amp;btsid=12d312ef-b28e-4e41-ac0a-ff39da0a68a1&#34;&gt;ESP8266-12E&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;1x &lt;a href=&#34;https://de.aliexpress.com/item/Serial-WIFI-ESP8266-module-adapter-plate-Full-IO-port-leads-you-can-choose-the-ESP-07/32380914509.html?spm=2114.010208.3.1.Am64ZS&amp;amp;ws_ab_test=searchweb0_0,searchweb201602_2_10065_10068_10000009_10084_10083_10080_10082_10081_10060_10061_10062_10056_10055_10037_10054_10059_10032_10099_10078_10079_10077_427_426_10103_10073_10102_10101_10096_10052_10050_10107_10106_10051,searchweb201603_3,afswitch_5&amp;amp;btsid=12d312ef-b28e-4e41-ac0a-ff39da0a68a1&#34;&gt;ESP8266-12E Break-Out Board&lt;/a&gt; (optional)&lt;/p&gt;
+
+&lt;p&gt;1x &lt;a href=&#34;https://de.aliexpress.com/item/5PCS-LOT-FREE-SHIPPING-Soil-moisture-meter-testing-module-soil-humidity-sensor-robot-intelligent-car-for/1625352348.html?spm=2114.010208.8.53.K1kpov&#34;&gt;Soil Mositure Sensor&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;some wires and resistors for the voltage divider&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&#34;2-build&#34;&gt;2.Build&lt;/h2&gt;
+
+&lt;p&gt;Wire up the components like shown in the following picture. Please make sure to use a voltage divider because the ESP8266&amp;rsquo;s analog in has a range from 0 V - 1 V, but the sensor ranges from 0 V - 3.3 V
+&lt;img src=&#34;https://cloud.githubusercontent.com/assets/16187615/21501819/8409f220-cc4b-11e6-86f8-37d96be0e6bd.png&#34; alt=&#34;sketch&#34; /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&#34;3-program&#34;&gt;3.Program&lt;/h2&gt;
+
+&lt;p&gt;The prototype code can be found on &lt;a href=&#34;https://github.com/eightBEC/esp8266moisture&#34;&gt;GitHub&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;I&amp;rsquo;ve been using IBM&amp;rsquo;s IoT Platform to send my data to, but you can use every IoT platform you like to use.
+Before uploading the code, adjust the config0.lua file which contains all properties for WIFI and IoT connectivity.
+Make sure to upload all .lua files to your device using a tool like LuaLoader.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&#34;4-next-steps&#34;&gt;4.Next Steps&lt;/h2&gt;
+
+&lt;p&gt;In the future I&amp;rsquo;ll add a solar panel, a lithium-ion battery pack and a MOSFET to disconnect the sensor while deep sleep.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>ESP8266 on White Aliexpress Break-Out Board</title>
