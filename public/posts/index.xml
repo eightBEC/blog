@@ -36,7 +36,8 @@ The idea is to read the moisture value every x hours and put the ESP8266 into de
 &lt;h2 id=&#34;2-build&#34;&gt;2.Build&lt;/h2&gt;
 
 &lt;p&gt;Wire up the components like shown in the following picture. Please make sure to use a voltage divider because the ESP8266&amp;rsquo;s analog in has a range from 0 V - 1 V, but the sensor ranges from 0 V - 3.3 V
-&lt;img src=&#34;https://cloud.githubusercontent.com/assets/16187615/21501819/8409f220-cc4b-11e6-86f8-37d96be0e6bd.png&#34; alt=&#34;sketch&#34; /&gt;&lt;/p&gt;
+&lt;img src=&#34;https://cloud.githubusercontent.com/assets/16187615/21501819/8409f220-cc4b-11e6-86f8-37d96be0e6bd.png&#34; alt=&#34;sketch&#34; /&gt;
+&lt;img src=&#34;https://cloud.githubusercontent.com/assets/16187615/21503515/55cb4712-cc58-11e6-97e9-816aecd944f0.jpg&#34; alt=&#34;prototype esp8266 soil moisture&#34; /&gt;&lt;/p&gt;
 
 &lt;hr /&gt;
 
@@ -50,7 +51,13 @@ Make sure to upload all .lua files to your device using a tool like LuaLoader.&l
 
 &lt;hr /&gt;
 
-&lt;h2 id=&#34;4-next-steps&#34;&gt;4.Next Steps&lt;/h2&gt;
+&lt;h2 id=&#34;4-saving-a-plant-s-life&#34;&gt;4.Saving A Plant&amp;rsquo;s Life&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://cloud.githubusercontent.com/assets/16187615/21503516/5725fc92-cc58-11e6-86e6-eba90e7e7466.jpg&#34; alt=&#34;esp8266 plant&#34; /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&#34;5-next-steps&#34;&gt;5.Next Steps&lt;/h2&gt;
 
 &lt;p&gt;In the future I&amp;rsquo;ll add a solar panel, a lithium-ion battery pack and a MOSFET to disconnect the sensor while deep sleep.&lt;/p&gt;
 </description>

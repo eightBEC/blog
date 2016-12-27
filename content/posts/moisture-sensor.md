@@ -23,8 +23,10 @@ some wires and resistors for the voltage divider
 
 2.Build
 -------------
+
 Wire up the components like shown in the following picture. Please make sure to use a voltage divider because the ESP8266's analog in has a range from 0 V - 1 V, but the sensor ranges from 0 V - 3.3 V
 ![sketch](https://cloud.githubusercontent.com/assets/16187615/21501819/8409f220-cc4b-11e6-86f8-37d96be0e6bd.png)
+![prototype esp8266 soil moisture](https://cloud.githubusercontent.com/assets/16187615/21503515/55cb4712-cc58-11e6-97e9-816aecd944f0.jpg)
 
 * * * *
 3.Program
@@ -35,7 +37,14 @@ The prototype code can be found on [GitHub](https://github.com/eightBEC/esp8266m
 I've been using IBM's IoT Platform to send my data to, but you can use every IoT platform you like to use.
 Before uploading the code, adjust the config0.lua file which contains all properties for WIFI and IoT connectivity.
 Make sure to upload all .lua files to your device using a tool like LuaLoader.
+
 * * * *
-4.Next Steps
+4.Saving A Plant's Life
+-------------
+
+![esp8266 plant](https://cloud.githubusercontent.com/assets/16187615/21503516/5725fc92-cc58-11e6-86e6-eba90e7e7466.jpg)
+
+* * * *
+5.Next Steps
 -------------
 In the future I'll add a solar panel, a lithium-ion battery pack and a MOSFET to disconnect the sensor while deep sleep.
